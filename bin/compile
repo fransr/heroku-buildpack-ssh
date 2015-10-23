@@ -16,16 +16,17 @@
 # You should have received a copy of the GNU General Public License along with
 # this program.  If not, see <http://www.gnu.org/licenses/>.
 # -----------------------------------------------------------------------------
-
+echo "create dir"
 mkdir -p ~/.ssh/
 chmod 700 ~/.ssh/
 
 echo "$SSH_KEY" > ~/.ssh/id_rsa
+echo "$SSH_KEY"
 chmod 400 ~/.ssh/id_rsa
 
 echo 'StrictHostKeyChecking=no' > ~/.ssh/config
 chmod 600 ~/.ssh/config
-
+echo "YEAH!"
 mkdir -p "$1/.profile.d"
 cat > "$1/.profile.d/00-clobber-ssh-key.sh" << EOF
 echo 'unsetting ssh deploy key'
