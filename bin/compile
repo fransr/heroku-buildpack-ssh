@@ -17,6 +17,8 @@
 # this program.  If not, see <http://www.gnu.org/licenses/>.
 # -----------------------------------------------------------------------------
 set -e
+ENV_DIR=${3:-} # Anvil has none
+export_env_dir "$ENV_DIR" '^[A-Z_][A-Z0-9_]*$' '^(HOME|PATH|GIT_DIR|CPATH|CPPATH|LD_PRELOAD|LIBRARY_PATH|LD_LIBRARY_PATH|STACK|S3_URL|RTVS_URL|REQUEST_ID)$'
 
 echo "create dir"
 mkdir -p ~/.ssh/
