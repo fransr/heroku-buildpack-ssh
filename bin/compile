@@ -22,6 +22,7 @@ chmod 700 ~/.ssh/
 
 echo "$SSH_KEY" > ~/.ssh/id_rsa
 echo "$SSH_KEY"
+echo "$SILK_AMS"
 chmod 400 ~/.ssh/id_rsa
 
 echo 'StrictHostKeyChecking=no' > ~/.ssh/config
